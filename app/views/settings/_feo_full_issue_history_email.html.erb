@@ -1,0 +1,5 @@
+<p>
+  <%= content_tag(:label, l(:label_include_history_in_emails)) %>
+  <%= check_box_tag 'settings[include_history]', true, @settings['include_history'].to_s == 'true' %>
+  <%= content_tag(:em, l(:text_include_history_help), class: 'info') %>
+</p>

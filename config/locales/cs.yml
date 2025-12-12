@@ -1,0 +1,4 @@
+cs:
+  label_include_history_in_emails: "Zahrnout úplnou historii do e-mailových notifikací"
+  text_include_history_help: "Pokud je zapnuto, celá historie issue (journals) bude zahrnuta na konci e-mailových notifikací."
+  label_changes: "Změny"

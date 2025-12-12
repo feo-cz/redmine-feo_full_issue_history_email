@@ -1,0 +1,20 @@
+<% if include_issue_history? && @issue %>
+----------------------------------------
+<%= l(:label_history) %>
+----------------------------------------
+<%   @issue.journals.reorder(created_on: :asc).each do |journal| %>
+<%= journal.created_on.strftime('%Y-%m-%d %H:%M') %> – <%= journal.user.name %>
+<%     if journal.notes.present? %>
+<%= l(:field_notes) %>:
+<%= journal.notes %>
+
+<%     end %>
+<%     if journal.details.any? %>
+<%= l(:label_changes) %>:
+<%       journal.details.each do |detail| %>
+<%= format_journal_details(detail) %>
+<%       end %>
+
+<%     end %>
+<%   end %>
+<% end %>

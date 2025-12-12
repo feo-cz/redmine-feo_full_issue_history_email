@@ -1,0 +1,4 @@
+en:
+  label_include_history_in_emails: "Include full history in email notifications"
+  text_include_history_help: "When enabled, all issue history (journals) will be included at the end of email notifications."
+  label_changes: "Changes"

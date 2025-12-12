@@ -1,0 +1,18 @@
+<%= l(:text_issue_added, id: "##{@issue.id}", author: @issue.author) %>
+
+========================================
+<%= @issue %> - <%= @issue_url %>
+========================================
+
+<% unless @issue.description.blank? %><%= l(:field_description) %>:
+
+<%= @issue.description %>
+<% end %>
+
+----------------------------------------
+<% @issue.custom_field_values.each do |c| %>
+  <% if c.value.present? %><%= c.custom_field.name %>: <%= show_value(c) %>
+  <% end %>
+<% end %>
+
+<%= render partial: 'mailer/issue_history' %>
