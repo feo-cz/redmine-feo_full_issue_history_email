@@ -12,5 +12,5 @@ Redmine::Plugin.register :feo_full_issue_history_email do
 end
 
 Rails.application.config.after_initialize do
-  require_relative 'lib/feo_full_issue_history_email/mailer_patch'
+  require_relative 'lib/feo_full_issue_history_email/mail_interceptor'
 end
