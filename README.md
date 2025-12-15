@@ -9,9 +9,10 @@ Redmine plugin that adds complete issue history to email notifications.
   - Date and time
   - User who made the change
   - Comments (notes)
-  - Field changes (details)
+  - Field changes (details) with proper field name translations
 - Configurable via plugin settings (can be enabled/disabled)
 - Supports multiple languages (EN, CS)
+- **Does not override Redmine templates** - uses method patching for reliability
 
 ## Requirements
 
